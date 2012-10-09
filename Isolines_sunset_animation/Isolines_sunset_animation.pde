@@ -1,6 +1,7 @@
 import isolines.*;
 import channels.*;
 //sunset fades slowly to blue
+
 String filename = "5_sunset.jpeg";
 //String filename = "ABicon.png"; //my face - also gets straight line artifaces
 Isolines finder;
