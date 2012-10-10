@@ -129,7 +129,7 @@ void keyPressed(){
   }
   
   if(key == 's'){
-      model.saveModel("model.txt");
+      model.saveModel("model_glass.txt");
   }
 }
 
