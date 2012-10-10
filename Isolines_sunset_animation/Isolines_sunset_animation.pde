@@ -1,6 +1,7 @@
 import isolines.*;
 import channels.*;
-//sunset fades slowly to blue
+//sunset fades slowly to blue - using contours
+//long diagonal artifacts - from connecting far apart contour sets? not one long line, still made of tiny point-to-point lines, but all same contour id
 
 String filename = "5_sunset.jpeg";
 //String filename = "ABicon.png"; //my face - also gets straight line artifaces
