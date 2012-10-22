@@ -25,7 +25,7 @@ void setup()
   frameRate(20);
   smooth();
   minim = new Minim(this);
-  track = minim.loadFile("Big_Band_Swing.mp3", 2048);
+  track = minim.loadFile("medium/Big_Band_Swing.mp3", 2048);
   track.loop();
 }
 //

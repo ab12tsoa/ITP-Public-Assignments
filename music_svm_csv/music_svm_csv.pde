@@ -21,16 +21,22 @@ double amp = 0.00;
 String musicSpeed = "Tempo";
 
 void setup(){
-  // get the names of all of the image files in the "squirrel" folder
+  
   minim = new Minim(this);
   
   String[] folderNames = {"fast", "medium", "slow"};
   for (String f : folderNames){
-  // get the names of all of the image files in the "medium" folder
+  // get the names of all of the files in the folders
   java.io.File folder = new java.io.File(dataPath(f));
   String[] songName = folder.list();
    for(String s : songName){
     if(s.toCharArray()[0] != '.'){ //ignore hidden files
+    
+    int[] bpm{120, 125, 130, 145, 150, 155, 160, 165, 170};
+    for(int[] b: bpm){
+      
+    }
+    
     processFile(s, f);
     }
    }  
@@ -40,15 +46,17 @@ void setup(){
    AudioPlayer track;
    track = minim.loadFile(classification + "/" + fileName, 2048);
    //track.loop();
-    track.getBeats();
+//    track.getBeats();
     track.close();
     
     println(classification + ": " + fileName);
   
     
   // Create a new file in the sketch directory
-  //  output = createWriter("music_svm.csv"); 
+    output = createWriter("music_svm.csv"); 
 
+  //temporary classification cheat to test
+    
   //open song (songName)
   //get bpm using BeatListener (beats)
   
@@ -58,6 +66,7 @@ void setup(){
   
   //take results, write to csv
 //  output.println(songName +"," + beats + "," + amp + "," + musicSpeed);
+    output.println(fileName +"," + beats + "," + amp + "," + classification);
 
   
   
